@@ -89,3 +89,71 @@ but oscii-bot already has working macOS integration (and is written in C, thus h
 
 ## Implementation notes
 
+### Concept
+
+We have two jobs here:
+1. Define the OSC protocol Reaper uses for reading and writing
+2. Translate between these OSC messages and the hardware's MIDI messages
+
+### OSC definition
+
+There is rather little documentation, I've cobbled my settings together from the (at least well-commented) `Default.ReaperOSC` file.
+Luckily, the nanoKontrol is a rather simple device, so we don't need most of the metadata settings/functions like "device track count", and only a handful of main function verbs.
+
+In addition to the predefined control surface functions, which are mostly read and write (e.g. "track volume", "start/stop playback", "start/stop recording"),
+Reaper exposes *any* action for writing (i.e. triggering) with the `ACTION` verb.
+This requires an integer parameter to identify the action you want to perform,
+which you can get from the "Actions" menu by right-clicking an action and selecting "Copy selected action command ID".
+
+
+### oscii-bot language
+
+[API Documentation](https://www.cockos.com/oscii-bot/oscii-bot-doc.html)
+
+An oscii-bot program consists of sections:
+
+* Input/output declarations (`@input`, `@output`)
+* Initialization (`@init`)
+* "on receiving an OSC message" (`@oscmsg`)
+* "on receiving a MIDI message" (`@midimsg`)
+
+There is no `if` statement, instead the ternary operator is (ab-) used::
+
+    msg2 == 42 ? (
+      calculate_values()
+      do_stuff()
+    )
+
+#### OSC
+
+Receiving::
+
+    oscmatch("/track/%d/mute", track) ? (
+      state = oscparm(0);
+      printf("mute of track %d was set to %d", track, state);
+    )
+
+* Parameters in the "URL" are extracted via format string (like `printf`)
+* The Value(s) are accessed by index with `oscparm()`
+
+
+Sending::
+
+    oscsend(DEVICE, "b/track/%d/mute", 0, track);
+
+The ordering of the function parameters to `oscsend()` is a little peculiar:
+`oscsend(device, url, value, [value...,] parameter, [parameter...])`,
+i.e. the "URL" parameters go at the end of the varargs.
+
+
+#### MIDI
+
+MIDI messages are split into 3 built-in global variables, `msg1`, `msg2` and `msg3` on receive,
+and those same variables must be set before calling `midisend(DEVICE)`.
+
+* `msg1` is the "type" (nanoKontrol only uses "control change" 0xb0==176)
+* `msg2` is the "control number" (can be assigned via the KONTROL Editor software)
+* `msg3` is the value
+
+With the LED mode set to "external", we can turn the button-LEDs on and off by sending a corresponding control change with either 0 or "max value" (127 by default).
+See the [parameter guide](https://www.korg.com/us/support/download/product/0/159/) for details.
