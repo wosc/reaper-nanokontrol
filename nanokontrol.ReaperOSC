@@ -1,0 +1,35 @@
+# -*- conf -*-
+# symlink to ~/Library/Application Support/REAPER/OSC/nanoKONTROL.ReaperOSC
+# Docs: <http://www.cockos.com/reaper/sdk/osc/osc.php>
+
+DEVICE_TRACK_COUNT 8
+DEVICE_SEND_COUNT 0
+DEVICE_RECEIVE_COUNT 0
+DEVICE_FX_COUNT 0
+DEVICE_FX_PARAM_COUNT 0
+DEVICE_FX_INST_PARAM_COUNT 0
+DEVICE_MARKER_COUNT 0
+DEVICE_REGION_COUNT 0
+
+DEVICE_TRACK_FOLLOWS DEVICE
+REAPER_TRACK_FOLLOWS REAPER
+DEVICE_TRACK_BANK_FOLLOWS DEVICE
+DEVICE_FX_FOLLOWS DEVICE
+DEVICE_EQ INSERT
+DEVICE_ROTARY_CENTER 0
+
+TRACK_VOLUME n/track/@/volume
+TRACK_PAN n/track/@/pan
+TRACK_MUTE b/track/@/mute
+TRACK_SOLO b/track/@/solo
+TRACK_REC_ARM b/track/@/recarm
+
+RECORD t/record
+STOP t/stop
+PLAY t/play
+PAUSE t/pause
+REWIND b/rewind
+FORWARD b/forward
+REPEAT b/repeat
+
+ACTION i/action
