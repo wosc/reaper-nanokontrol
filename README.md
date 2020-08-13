@@ -5,6 +5,20 @@ Enables using a [Korg nanoKONTROL2](https://www.korg.com/products/computergear/n
 Tested under macOS 10.13 with Reaper 6.13.
 
 
+## Features
+
+* Faders control track volume
+* Knobs control track pan
+* S/M/R buttons toggle solo/mute/record-arm (and light up according to the Reaper status)
+* Transport buttons control stop/play/record; hold down rewind/forward to move the Reaper cursor backwards/forwards
+* Marker set/prev/next works
+* Cycle button toggles repeat  (and lights up according to the Reaper status)
+* Track prev/next buttons go to start/end of the project for now.
+  (You could e.g. implement a bank up/down functionality to handle more than 8 tracks, 
+   but it'd be a bit of effort, since you'd have to keep track of all the mute states yourself, so you can update the hardware on each bank change. 
+   Also there's no good way to indicate which bank you're currently on, so I'm not sure it'd be all that helpful.)
+
+
 ## Setup
 
 **NOTE**: Before using this, see if one of the (less complex) alternatives mentioned below works for your use case!
