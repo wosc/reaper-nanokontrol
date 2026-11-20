@@ -1,9 +1,16 @@
-# Korg nanoKONTROL2 as a Reaper OSC control surface
+# Korg nanoKONTROL2 and Reaper
+
+## Update 2026: CSI Plugin
+
+I've moved away from the OSC-based solution presented below,
+and instead am using the wonderful [Control Surface Integrator](https://github.com/FunkybotsEvilTwin/CSIWiki/wiki) plugin,
+with a customized configuration (see `./csi` folder).
+(The hardware setup below still applies, this configuration uses "midi control change" mode of the nanokontrol).
+
+
+## OSC control surface
 
 Enables using a [Korg nanoKONTROL2](https://www.korg.com/products/computergear/nanokontrol2/) to control [Reaper](https://reaper.fm/).
-
-Tested under macOS 10.13 with Reaper 6.13.
-
 
 ## Features
 

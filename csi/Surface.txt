@@ -1,0 +1,291 @@
+StepSize
+    RotaryWidgetClass   0.003
+StepSizeEnd
+
+AccelerationValues
+    RotaryWidgetClass       Dec     41      42      43      44      45      46      47      48      49      4a      4b      4c      4d      4e      4f                
+    RotaryWidgetClass       Inc     01      02      03      04      05      06      07      08      09      0a      0b      0c      0d      0e      0f
+    RotaryWidgetClass       Val     0.0025  0.003   0.004   0.006   0.008   0.01    0.015   0.02    0.025   0.03    0.06    0.08    0.1     0.2     0.6
+AccelerationValuesEnd
+
+// ------------------------------------------------------------
+// Channel faders
+// ------------------------------------------------------------
+
+Widget Fader1
+    Fader7Bit B0 00 7F
+WidgetEnd
+
+Widget Fader2
+    Fader7Bit B0 01 7F
+WidgetEnd
+
+Widget Fader3
+    Fader7Bit B0 02 7F
+WidgetEnd
+
+Widget Fader4
+    Fader7Bit B0 03 7F
+WidgetEnd
+
+Widget Fader5
+    Fader7Bit B0 04 7F
+WidgetEnd
+
+Widget Fader6
+    Fader7Bit B0 05 7F
+WidgetEnd
+
+Widget Fader7
+    Fader7Bit B0 06 7F
+WidgetEnd
+
+Widget Fader8
+    Fader7Bit B0 07 7F
+WidgetEnd
+
+Widget Fader9
+    Fader7Bit B0 08 7F
+WidgetEnd
+
+// ------------------------------------------------------------
+// Rotary knobs
+// ------------------------------------------------------------
+
+Widget Rotary1
+    Fader7Bit B0 10 7F
+WidgetEnd
+
+Widget Rotary2
+    Fader7Bit B0 11 7F
+WidgetEnd
+
+Widget Rotary3
+    Fader7Bit B0 12 7F
+WidgetEnd
+
+Widget Rotary4
+    Fader7Bit B0 13 7F
+WidgetEnd
+
+Widget Rotary5
+    Fader7Bit B0 14 7F
+WidgetEnd
+
+Widget Rotary6
+    Fader7Bit B0 15 7F
+WidgetEnd
+
+Widget Rotary7
+    Fader7Bit B0 16 7F
+WidgetEnd
+
+Widget Rotary8
+    Fader7Bit B0 17 7F
+WidgetEnd
+
+Widget Rotary9
+    Fader7Bit B0 18 7F
+WidgetEnd
+
+// ------------------------------------------------------------
+// Solo buttons
+// ------------------------------------------------------------
+
+Widget Solo1
+    AnyPress B0 20 7F B0 20 00
+    FB_TwoState B0 20 7F B0 20 00
+WidgetEnd
+
+Widget Solo2
+    AnyPress B0 21 7F B0 21 00
+    FB_TwoState B0 21 7F B0 21 00
+WidgetEnd
+
+Widget Solo3
+    AnyPress B0 22 7F B0 22 00
+    FB_TwoState B0 22 7F B0 22 00
+WidgetEnd
+
+Widget Solo4
+    AnyPress B0 23 7F B0 23 00
+    FB_TwoState B0 23 7F B0 23 00
+WidgetEnd
+
+Widget Solo5
+    AnyPress B0 24 7F B0 24 00
+    FB_TwoState B0 24 7F B0 24 00
+WidgetEnd
+
+Widget Solo6
+    AnyPress B0 25 7F B0 25 00
+    FB_TwoState B0 25 7F B0 25 00
+WidgetEnd
+
+Widget Solo7
+    AnyPress B0 26 7F B0 26 00
+    FB_TwoState B0 26 7F B0 26 00
+WidgetEnd
+
+Widget Solo8
+    AnyPress B0 27 7F B0 27 00
+    FB_TwoState B0 27 7F B0 27 00
+WidgetEnd
+
+Widget Solo9
+    AnyPress B0 28 7F B0 28 00
+    FB_TwoState B0 28 7F B0 28 00
+WidgetEnd
+
+// ------------------------------------------------------------
+// Mute buttons
+// ------------------------------------------------------------
+
+Widget Mute1
+    AnyPress B0 30 7F B0 30 00
+    FB_TwoState B0 30 7F B0 30 00
+WidgetEnd
+
+Widget Mute2
+    AnyPress B0 31 7F B0 31 00
+    FB_TwoState B0 31 7F B0 31 00
+WidgetEnd
+
+Widget Mute3
+    AnyPress B0 32 7F B0 32 00
+    FB_TwoState B0 32 7F B0 32 00
+WidgetEnd
+
+Widget Mute4
+    AnyPress B0 33 7F B0 33 00
+    FB_TwoState B0 33 7F B0 33 00
+WidgetEnd
+
+Widget Mute5
+    AnyPress B0 34 7F B0 34 00
+    FB_TwoState B0 34 7F B0 34 00
+WidgetEnd
+
+Widget Mute6
+    AnyPress B0 35 7F B0 35 00
+    FB_TwoState B0 35 7F B0 35 00
+WidgetEnd
+
+Widget Mute7
+    AnyPress B0 36 7F B0 36 00
+    FB_TwoState B0 36 7F B0 36 00
+WidgetEnd
+
+Widget Mute8
+    AnyPress B0 37 7F B0 37 00
+    FB_TwoState B0 37 7F B0 37 00
+WidgetEnd
+
+Widget Mute9
+    AnyPress B0 38 7F B0 38 00
+    FB_TwoState B0 38 7F B0 38 00
+WidgetEnd
+
+// ------------------------------------------------------------
+// Record arm buttons
+// ------------------------------------------------------------
+
+Widget RecArm1
+    AnyPress B0 40 7F B0 40 00
+    FB_TwoState B0 40 7F B0 40 00
+WidgetEnd
+
+Widget RecArm2
+    AnyPress B0 41 7F B0 41 00
+    FB_TwoState B0 41 7F B0 41 00
+WidgetEnd
+
+Widget RecArm3
+    AnyPress B0 42 7F B0 42 00
+    FB_TwoState B0 42 7F B0 42 00
+WidgetEnd
+
+Widget RecArm4
+    AnyPress B0 43 7F B0 43 00
+    FB_TwoState B0 43 7F B0 43 00
+WidgetEnd
+
+Widget RecArm5
+    AnyPress B0 44 7F B0 44 00
+    FB_TwoState B0 44 7F B0 44 00
+WidgetEnd
+
+Widget RecArm6
+    AnyPress B0 45 7F B0 45 00
+    FB_TwoState B0 45 7F B0 45 00
+WidgetEnd
+
+Widget RecArm7
+    AnyPress B0 46 7F B0 46 00
+    FB_TwoState B0 46 7F B0 46 00
+WidgetEnd
+
+Widget RecArm8
+    AnyPress B0 47 7F B0 47 00
+    FB_TwoState B0 47 7F B0 47 00
+WidgetEnd
+
+Widget RecArm9
+    AnyPress B0 48 7F B0 48 00
+    FB_TwoState B0 48 7F B0 48 00
+WidgetEnd
+
+// ------------------------------------------------------------
+// Transport
+// ------------------------------------------------------------
+
+Widget Play
+    Press B0 29 7F
+    FB_TwoState B0 29 7F B0 29 00
+WidgetEnd
+
+Widget Stop
+    Press B0 2A 7F
+WidgetEnd
+
+Widget Rewind
+    Press B0 2B 7F B0 2B 00
+WidgetEnd
+
+Widget FastForward
+    Press B0 2C 7F B0 2C 00
+WidgetEnd
+
+Widget Record
+    Press B0 2D 7F
+    FB_TwoState B0 2D 7F B0 2D 00
+WidgetEnd
+
+Widget Cycle
+    AnyPress B0 2E 7F B0 2E 00
+    FB_TwoState B0 2E 7F B0 2E 00
+WidgetEnd
+
+// ------------------------------------------------------------
+// Navigation and marker buttons
+// ------------------------------------------------------------
+
+Widget TrackPrev
+    Press B0 3A 7F
+WidgetEnd
+
+Widget TrackNext
+    Press B0 3B 7F
+WidgetEnd
+
+Widget MarkerSet
+    Press B0 3C 7F
+WidgetEnd
+
+Widget MarkerPrev
+    Press B0 3D 7F
+WidgetEnd
+
+Widget MarkerNext
+    Press B0 3E 7F
+WidgetEnd

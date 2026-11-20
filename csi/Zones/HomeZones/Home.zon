@@ -1,0 +1,19 @@
+Zone Home
+  OnInitialization SetLatchTime 100
+
+  IncludedZones
+    Track
+  IncludedZonesEnd
+
+  Play Play
+  Stop Stop
+  Record Record
+  Rewind Rewind
+  FastForward FastForward
+  Cycle CycleTimeline
+  TrackPrev Reaper "40042" // GOTO_PROJECT_START
+  TrackNext Reaper "40043" // GOTO_PROJECT_END
+  MarkerSet Reaper "40157" // INSERT_MARKER
+  MarkerPrev Reaper "40172" // PREV_MARKER
+  MarkerNext  Reaper "40173" // NEXT_MARKER
+ZoneEnd
